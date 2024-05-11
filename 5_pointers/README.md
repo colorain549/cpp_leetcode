@@ -2,7 +2,7 @@
 
 1. 移除元素(27)
 2. 反转字符串(344)
-3. (替换数字)[https://kamacoder.com/problempage.php?pid=1064]
+3. [替换数字](https://kamacoder.com/problempage.php?pid=1064)
 4. 反转字符串中的单词(151)
 5. 反转链表(206)
 6. 删除链表的倒数第N个节点(19)
