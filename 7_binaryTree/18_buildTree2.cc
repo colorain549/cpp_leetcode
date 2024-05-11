@@ -1,6 +1,4 @@
-// 从中序序列和后序序列构造二叉树
-// 输出
-// 9 3 15 20 7
+// 从前序序列和中序序列构造二叉树
 #include <iostream>
 #include <vector>
 
@@ -30,6 +28,7 @@ void printVec(vector<int> &ivec)
 
 class Solution
 {
+public:
 private:
     void traversal(TreeNode *node, vector<int> &ivec)
     {
@@ -44,45 +43,38 @@ private:
     }
 
 public:
-    TreeNode *buildTree(vector<int> &inorder, vector<int> &postorder)
+    //
+    TreeNode *buildTree(vector<int> &preorder, vector<int> &inorder)
     {
-        if (inorder.size() == 0 || postorder.size() == 0)
+        if (preorder.size() == 0 && inorder.size() == 0)
         {
             return nullptr;
         }
-
-        // 后序序列最后一个元素
-        int nodeVal = postorder[postorder.size() - 1];
-        // 后序序列最后一个元素在中序序列的位置
-        int index;
+        // 前序序列的第一个元素为根节点
+        int nodeVal = preorder[0];
+        // 中序序列中找切割点
+        int index = 0;
         for (index = 0; index < inorder.size(); index++)
         {
-            if (inorder[index] == nodeVal)
+            if (nodeVal == inorder[index])
             {
                 break;
             }
         }
-
-        // 创建节点
+        // 创建根节点
         TreeNode *node = new TreeNode(nodeVal);
-
         // 切中序
         vector<int> inorderLeft(inorder.begin(), inorder.begin() + index);
         vector<int> inorderRight(inorder.begin() + index + 1, inorder.end());
+        // 切前序
+        vector<int> preorderLeft(preorder.begin() + 1, preorder.begin() + 1 + inorderLeft.size());
+        vector<int> preorderRight(preorder.begin() + 1 + inorderLeft.size(), preorder.end());
 
-        // 舍弃后序序列最后一个元素
-        postorder.resize(postorder.size() - 1);
-
-        // 切后序
-        vector<int> postorderLeft(postorder.begin(), postorder.begin() + inorderLeft.size());
-        vector<int> postorderRight(postorder.begin() + inorderLeft.size(), postorder.end());
-
-        node->left = buildTree(inorderLeft, postorderLeft);
-        node->right = buildTree(inorderRight, postorderRight);
+        node->left = buildTree(preorderLeft, inorderLeft);
+        node->right = buildTree(preorderRight, inorderRight);
 
         return node;
     }
-
     //
     vector<int> inorderTraversal(TreeNode *root)
     {
@@ -108,14 +100,14 @@ int main()
 {
     vector<int> result;
 
+    vector<int> preorder{3, 9, 20, 15, 7};
     vector<int> inorder{9, 3, 15, 20, 7};
-    vector<int> postorder{9, 15, 7, 20, 3};
 
     //
     // 解决方案
     //
     Solution solution;
-    TreeNode *newRoot = solution.buildTree(inorder, postorder);
+    TreeNode *newRoot = solution.buildTree(preorder, inorder);
 
     result = solution.inorderTraversal(newRoot);
     printVec(result);
