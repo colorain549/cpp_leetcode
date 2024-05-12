@@ -7,4 +7,5 @@
 5_leftRevolve左旋字符串
 5. [右旋字符串](https://kamacoder.com/problempage.php?pid=1065)
 6. 实现strStr(28)(前缀表、KMP算法)
-7. 重复的子字符串(459)(移动匹配/KMP算法)
+7. 重复的子字符串(459)(移动匹配)  
+7_重复的子字符串(459)(KMP算法)(尚未理解)
