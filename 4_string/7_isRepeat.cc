@@ -15,7 +15,8 @@ public:
         t.erase(t.begin());
         t.erase(t.end() - 1);
         // 注意std::string::npos
-        if(t.find(s) != std::string::npos){
+        if (t.find(s) != std::string::npos)
+        {
             return true;
         }
         return false;
