@@ -3,25 +3,39 @@
 2. 用栈实现队列(232)
 3. 用队列实现栈(225)
 4. 有效的括号(20)
-5. 删除字符串中的所有相邻重复项(1047)
+5. 删除字符串中的所有相邻重复项(1047)(使用栈)
+5 删除字符串中的所有相邻重复项(1047)(字符串充当队列)
 ```
 string removeDuplicates(string s)
     {
-        // 字符串充当队列
-        string result;
+        // abbaca
+        // 空栈
+        stack<int> st;
+        // 操作
         for (int i = 0; i < s.size(); i++)
         {
-            // 队列空或队尾元素不等于当前元素则入队
-            if (result.empty() || s[i] != result.back())
+            // 栈为空
+            // 栈顶元素不等于当前遍历的元素
+            if (st.empty() || st.top() != s[i])
             {
-                result.push_back(s[i]);
+                st.push(s[i]);
             }
             else
             {
-                // 队尾元素等于当前元素
-                result.pop_back();
+                st.pop();
             }
         }
+        // 保存结果的容器
+        string result;
+        // 处理栈内剩下的字符ac
+        while (!st.empty())
+        {
+            // 保存中间结果
+            result.push_back(st.top());
+            st.pop();
+        }
+        // 将字符串逆序成ca
+        reverse(result.begin(), result.end());
         return result;
     }
 ```
