@@ -35,23 +35,23 @@ public:
     {
         // 迭代法
         ListNode *dummyNode = new ListNode(0);
-        ListNode *pre = dummyNode;
+        ListNode *cur = dummyNode;
         while (list1 != nullptr && list2 != nullptr)
         {
             if (list1->val < list2->val)
             {
-                pre->next = list1;
+                cur->next = list1;
                 list1 = list1->next;
             }
             else
             {
-                pre->next = list2;
+                cur->next = list2;
                 list2 = list2->next;
             }
-            pre = pre->next;
+            cur = cur->next;
         }
         // 若list1为空连接到list2
-        pre->next = list1 == nullptr ? list2 : list1;
+        cur->next = list1 == nullptr ? list2 : list1;
         return dummyNode->next;
     }
 };
