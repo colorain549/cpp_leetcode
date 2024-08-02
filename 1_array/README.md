@@ -23,6 +23,7 @@ for (int j = 0; j < nums.size(); j++)
     {
         subLength = j - i + 1;
         result = min(result, subLength);
+        // 下面2个语句顺序不能调换(!!!注意!!!)
         sum -= nums[i];
         i++;
     }
