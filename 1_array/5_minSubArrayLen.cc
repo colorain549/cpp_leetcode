@@ -31,6 +31,7 @@ public:
             {
                 subLength = j - i + 1;
                 result = min(result, subLength);
+                // 下面2个语句顺序不能调换(!!!注意!!!)
                 sum -= nums[i];
                 i++;
             }
