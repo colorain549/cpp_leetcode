@@ -39,14 +39,17 @@ public:
         getNext(&next[0], needle);
         for (int i = 0; i < haystack.size(); i++)
         {
+            // 不匹配
             while (j >= 0 && haystack[i] != needle[j + 1])
             {
                 j = next[j];
             }
+            // 匹配
             if (haystack[i] == needle[j + 1])
             {
                 j++;
             }
+            // 出现模式串
             if (j == needle.size() - 1)
             {
                 return i - needle.size() + 1;
