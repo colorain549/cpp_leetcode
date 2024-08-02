@@ -25,7 +25,7 @@ string removeDuplicates(string s)
         return result;
     }
 ```
-6. 逆波兰表达式(150)(long long)  
+6. 逆波兰表达式(150)(!!!注意long long!!!)  
 7_0myQueue单调队列
 7. 滑动窗口最大值(自定义单调队列)
 ```
