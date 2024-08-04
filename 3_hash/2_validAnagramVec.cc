@@ -9,7 +9,7 @@ class Solution
 public:
     bool isAnagram(string s, string t)
     {
-        vector<int> record(26);
+        vector<int> record(26, 0);
         // 建立映射index是s[i] v是该字母的频率
         for (int i = 0; i < s.size(); i++)
         {
