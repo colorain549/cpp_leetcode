@@ -12,15 +12,15 @@ public:
     {
         // 1221=>12
         // 22与12比较=>2
-        // 保存结果
+        // rset用于保存结果
         unordered_set<int> rset;
-        // 1221映射到nset后变成12
-        unordered_set<int> nset(nums1.begin(), nums1.end());
-        // nums2中的元素是否在nums1/nset中出现
+        // 1221映射到uset后变成12
+        unordered_set<int> uset(nums1.begin(), nums1.end());
+        // nums2中的元素是否在nums1/uset中出现
         // for (int num : nums2)
         for (const auto &num : nums2)
         {
-            if (nset.find(num) != nset.end())
+            if (uset.find(num) != uset.end())
             {
                 rset.insert(num);
             }
