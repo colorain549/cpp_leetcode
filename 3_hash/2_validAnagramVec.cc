@@ -16,7 +16,7 @@ public:
             record[s[i] - 'a']++;
         }
         // 建立映射index是t[i] v是该字母的频率
-        for (int i = 0; i < s.size(); i++)
+        for (int i = 0; i < t.size(); i++)
         {
             record[t[i] - 'a']--;
         }
