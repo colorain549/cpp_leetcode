@@ -18,8 +18,9 @@ public:
         {
             record[t[i] - 'a']--;
         }
+        // i < 26也可
         // 检查record数组中的频率是否全为0
-        for (int i = 0; i < 26; i++)
+        for (int i = 0; i < sizeof(record) / sizeof(record[0]); i++)
         {
             if (record[i] != 0)
             {
