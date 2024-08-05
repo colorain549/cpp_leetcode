@@ -26,6 +26,8 @@ private:
 public:
     string reverseStr(string s, int k)
     {
+        // abcd ef g
+        // ba   fe 
         for (int i = 0; i < s.size(); i += 2 * k)
         {
             // 长度大于k小于2k则反转前k
