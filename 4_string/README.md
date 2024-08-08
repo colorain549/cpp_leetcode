@@ -31,7 +31,7 @@ void reverse(string &s, int begin, int end){}
 2. 计算数字的数量
 3. 🌟重新调整字符串的长度(s.size()+count*5)
 4. 新字符串的下标sNewIndex
-5. while(sOldIndex>=0){}
+5. 填充字符串(实质上是覆盖)
 ```
 while(sOldIndex>=0){
     if(s[sOldIndex]>='0' && s[sOldIndex]<='9'){
