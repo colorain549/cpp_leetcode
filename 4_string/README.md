@@ -117,7 +117,10 @@ void getNext(int *next, const string &s){
 ```
 
 ## 7 重复的子字符串(459)(移动匹配) 
-1. string t = s + s;
+1. 拼接
+```
+string t = s + s;
+```
 2. 去头掐尾(erase+注意掐尾时需-1)
 ```
 t.erase(t.end()-1);
