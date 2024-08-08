@@ -71,6 +71,8 @@ void removeExtraSpaces(string &s){
     while(fast<s.size() && s[fast]!=' '){
         s[slow]=s[fast];
     }
+    // 重新调整大小
+    s.resize(slow);
 }
 ```
 2. 单词间插空格
