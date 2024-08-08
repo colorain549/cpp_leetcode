@@ -47,7 +47,7 @@ for(int i=0; i<nums.size(); i++){
 9. 四数之和(18)
 
 ## umap的使用
-1. for...auto
+1. for...auto 搭配运算符.
 ```
 for(const auto &it: umap){
     if(it.second < 0){
@@ -55,7 +55,7 @@ for(const auto &it: umap){
     }
 }
 ```
-2. 迭代器
+2. 迭代器 搭配运算符->
 ```
 for(auto it = umap.begin(); it != umap.end(); ++it){
     if(it->second < 0){
