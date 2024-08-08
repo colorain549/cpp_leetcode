@@ -46,7 +46,7 @@ for(int i=0; i<nums.size(); i++){
 ```
 9. 四数之和(18)
 
-补充(umap的使用):
+## umap的使用
 1. for...auto
 ```
 for(const auto &it: umap){
