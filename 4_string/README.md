@@ -71,7 +71,7 @@ void removeExtraSpaces(string &s){
             s[slow]=s[fast];
         }
     }
-    // 重新调整大小
+    // 🌟重新调整大小
     s.resize(slow);
 }
 ```
