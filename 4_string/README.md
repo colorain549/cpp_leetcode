@@ -88,9 +88,9 @@ s.resize(slow);
 ```
 
 ## 5 右旋字符串(思路)
-1. abcd ef
-2. dcba fe
-3. ef abcd
+1. 原字符串(abcd ef)
+2. 反转两次(dcba fe)
+3. 反转一次(ef abcd)
 
 ## 6 实现strStr
 1. 前缀表(-1版本)
