@@ -123,6 +123,7 @@ string t = s + s;
 ```
 2. 去头掐尾(erase+注意掐尾时需-1)
 ```
+t.erase(t.begin());
 t.erase(t.end()-1);
 ```
 3. find方法
