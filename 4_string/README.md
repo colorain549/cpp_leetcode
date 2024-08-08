@@ -87,7 +87,7 @@ if(slow != 0){
 s.resize(slow);
 ```
 
-## 5 右旋字符串
+## 5 右旋字符串(思路)
 1. abcd ef
 2. dcba fe
 3. ef abcd
