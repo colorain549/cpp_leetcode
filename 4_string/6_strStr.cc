@@ -18,7 +18,7 @@ public:
         // 从1开始
         for (int i = 1; i < s.size(); i++)
         {
-            if (j >= 0 && s[i] != s[j + 1])
+            while (j >= 0 && s[i] != s[j + 1])
             {
                 // 回退
                 j = next[j];
