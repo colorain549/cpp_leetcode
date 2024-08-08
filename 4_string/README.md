@@ -66,10 +66,10 @@ void removeExtraSpaces(string &s){
         if(s[fast] != ' '){
             ...
         }
-    }
-    // 实质上是覆盖
-    while(fast<s.size() && s[fast]!=' '){
-        s[slow]=s[fast];
+        // 实质上是覆盖
+        while(fast<s.size() && s[fast]!=' '){
+            s[slow]=s[fast];
+        }
     }
     // 重新调整大小
     s.resize(slow);
