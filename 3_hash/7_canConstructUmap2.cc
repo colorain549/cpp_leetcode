@@ -18,10 +18,10 @@ public:
         {
             umap[ransomNote[j] - 'a']--;
         }
-        // 迭代器
-        for (auto it = umap.begin(); it != umap.end(); ++it)
+        // for...auto
+        for (const auto &it : umap)
         {
-            if (it->second < 0)
+            if (it.second < 0)
             {
                 return false;
             }
