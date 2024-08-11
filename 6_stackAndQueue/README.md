@@ -100,6 +100,9 @@ class MyQueue
     }
 ```
 8_priorityQue优先级队列使用
+```
+priority_queue<int, vector<int>, std::greater<int>> pque;
+```
 8. 前K个高频元素(使用priority_queue和自定义函数对象)
 ```
 class MyCompare
