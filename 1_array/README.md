@@ -1,7 +1,21 @@
 ## 数组
 
 2. 二分查找(704)(左闭右闭区间)  
-2 二分查找(704)(左闭右开区间) 
+```
+int search(vector<int> &nums, int target)
+{
+    int low = 0;
+    int high = nums.size() - 1;
+    // [left, right]
+    // [1, 1]合法
+    while (low <= high)
+    {
+        ...
+    }
+    return -1;
+}
+```
+2 二分查找(704)(左闭右开区间)(难点)
 3. 移除元素(27)
 ```
 // 当快指针没有指向要找的值
